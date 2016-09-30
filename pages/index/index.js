@@ -34,16 +34,14 @@ Page({
 
   onLoad() {
     for (let i = 0; i < 8; i++) {
-      for (let j = 0; j < 8; j++) {
-        this.data.chessboard[i][j] = null
+      this.data.chessboard[0][i] = ['black', this.data.initial[i]]
+      this.data.chessboard[1][i] = ['black', 'pawn']
+      this.data.chessboard[6][i] = ['white', 'pawn']
+      this.data.chessboard[7][i] = ['white', this.data.initial[i]]
+      for (let j = 2; j < 6; j++) {
+        this.data.chessboard[j][i] = null
       }
     }
-    this.data.initial.forEach((name, index) => {
-      this.data.chessboard[0][index] = ['black', name]
-      this.data.chessboard[1][index] = ['black', 'pawn']
-      this.data.chessboard[6][index] = ['white', 'pawn']
-      this.data.chessboard[7][index] = ['white', name]
-    })
   },
 
 })
