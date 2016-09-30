@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="chessboard">
+    <view class="row" wx:for="{{chessboard}}" wx:for-item="row" wx:for-index="rowIndex">
+      <view class="col {{(rowIndex + colIndex & 1) ? 'odd' : 'even'}}" wx:for="{{row}}" wx:for-item="col" wx:for-index="colIndex">
+        <view class="ratio-keeper"></view>
+        <view class="col-content">
+          <block wx:if="{{col}}">
+            {{chess[col[0]][col[1]]}}
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
