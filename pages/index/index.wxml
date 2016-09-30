@@ -4,7 +4,7 @@
       <view wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:for-item="col" class="col {{(row + col & 1) ? 'odd' : 'even'}}">
         <view class="ratio-keeper"></view>
         <view class="col-content">
-          {{chessboard[row][col]}}
+          {{chessboard[8 * row + col]}}
         </view>
       </view>
     </view>
