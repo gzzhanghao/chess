@@ -11,21 +11,34 @@
   display: flex;
 }
 
-.col {
+.cell {
   flex: 1 1;
   position: relative;
   color: whitesmoke;
 }
 
-.col.odd {
+.cell.odd {
   background: #555;
 }
 
-.ratio-keeper {
+.cell-outline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.cell.selected .cell-outline {
+  border: 5px solid #333;
+}
+
+.cell-ratio-keeper {
   padding-top: 100%;
 }
 
-.col-content {
+.cell-content {
   position: absolute;
   width: 100%;
   height: 100%;
